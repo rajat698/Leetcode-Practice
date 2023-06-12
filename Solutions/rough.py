@@ -1,4 +1,6 @@
-s = [0]
+a = 'aab'
+b = 'xtz'
 
-if s:
-    print("Y")
+x = zip(a, b)
+
+print(tuple(x))

@@ -1,18 +1,21 @@
-def ismorphic(s, t):
-        
-    hashMap = {}
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
 
-    for i in range(len(s)):
-        if s[i] not in hashMap:
-            hashMap[s[i]] = t[i]
-        
-        else:
-            if hashMap[s[i]] == t[i]:
-                continue
+        hashMap = {}
+
+        for i in range(len(s)):
+            
+            if s[i] not in hashMap:
+                if t[i] not in hashMap.values():
+                    hashMap[s[i]] = t[i]
+                else:
+                    return False
             
             else:
-                return False
-
-    return True
-
-print(ismorphic('paper', 'title'))
+                if hashMap[s[i]] == t[i]:
+                    continue
+                
+                else:
+                    return False
+        
+        return True

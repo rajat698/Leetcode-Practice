@@ -1,3 +1,3 @@
-s = "cir"
-
-print(s[:1])
+s = "dog cat cat dog"
+s = s.split()
+print(s)

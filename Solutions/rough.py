@@ -1,6 +1,3 @@
-a = 'aab'
-b = 'xtz'
+s = "cir"
 
-x = zip(a, b)
-
-print(tuple(x))
+print(s[:1])

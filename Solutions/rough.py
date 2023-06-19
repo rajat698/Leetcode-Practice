@@ -1,24 +1,7 @@
-def isHappy(n):
+n = 999999
+mul = 1
 
-        summ = 0
-        for i in str(n):
+for i in range(n, 0, -1):
+    mul *= n
 
-            summ += (int(i) * int(i))
-            # print(summ)
-        
-        result = 0
-
-        for i in str(summ):
-
-            result += (int(i) * int(i))
-            print(result)
-
-        n = summ
-        if result == 1:
-            return True
-        
-        else:
-            isHappy(result)
-        
-
-print(isHappy(19))      
+print(mul)

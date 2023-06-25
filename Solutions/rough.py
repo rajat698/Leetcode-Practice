@@ -1,18 +1,13 @@
-s = "abacaba"
-
-count = 1
-letters = set()
-
-for i in s:
+def mySqrt(x: int) -> int:
     
-    if i not in letters:
-        letters.add(i)
-    
-    else:
-        count += 1
-        letters = set()
-        letters.add(i)
-        print(count)
-    print(letters)
 
-print(count)
+    for i in range(x):
+        tot = i * i
+        if tot == x:
+            return i
+        
+        elif tot > x:
+            return i - 1
+        
+
+print(mySqrt(1))

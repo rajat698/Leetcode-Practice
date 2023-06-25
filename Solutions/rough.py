@@ -1,13 +1,5 @@
-def mySqrt(x: int) -> int:
-    
+triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
 
-    for i in range(x):
-        tot = i * i
-        if tot == x:
-            return i
-        
-        elif tot > x:
-            return i - 1
-        
-
-print(mySqrt(1))
+for row in triangle[::-1]:
+    for i, n in enumerate(row):
+        print(i, n)

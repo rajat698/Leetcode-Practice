@@ -1,16 +1,13 @@
-m = 7
-n = 3
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
 
-grid = [[0] * (n)] * (m - 1)
-x = [1] * n
+        baseRow = [1] * n
 
-grid.append(x)
+        for i in range(m - 2, -1, -1):
+            NewRow = [1] * n
+            for j in range(n - 2, -1, -1):
+                NewRow[j] = baseRow[j] + NewRow[j + 1]
+            
+            baseRow = NewRow
 
-for i in range(len(grid)):
-    grid[i][n-1] = 1
-
-for i in range(len(grid) - 2, -1, -1):
-    for j in range(len(grid[0]) -2, -1, -1):
-        grid[i][j] = grid[i + 1][j] + grid[i][j + 1]
-
-print(grid)
+        return baseRow[0]

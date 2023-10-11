@@ -1,9 +1,18 @@
-obstacleGrid = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]
+n = 58
 
-for i in range(len(obstacleGrid[len(obstacleGrid) - 1])):
-    if obstacleGrid[len(obstacleGrid) - 1][i] == 1:
-        obstacleGrid[len(obstacleGrid) - 1][i] = 0
-    else:
-        obstacleGrid[len(obstacleGrid) - 1][i] = 1
+#4, 90, 900, 0
+#1990, 1900, 1000
 
-print(obstacleGrid)
+l = []
+x = 10
+while n != 0:
+    
+    a = n % x
+    x *= 10
+    l.append(a)
+
+    n -= a
+
+l.sort(reverse=True)
+
+print(l)

@@ -59,5 +59,3 @@ class Solution:
                     i = 0
     
         return result
-
-print(result)

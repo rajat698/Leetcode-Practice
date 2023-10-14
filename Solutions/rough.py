@@ -1,1 +1,3 @@
-print(int(6/-132))
+n = [1, 3,4]
+m = n
+print(m)
